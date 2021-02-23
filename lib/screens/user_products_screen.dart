@@ -15,7 +15,7 @@ class UserProductsScreen extends StatelessWidget {
         title: const Text('Your Products'),
         actions: [
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 20),
+            margin: EdgeInsets.symmetric(horizontal: 10),
             child: IconButton(
               icon: const Icon(Icons.add),
               onPressed: () {
