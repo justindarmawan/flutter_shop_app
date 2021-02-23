@@ -29,7 +29,7 @@ class CartScreen extends StatelessWidget {
                       fontSize: 20,
                     ),
                   ),
-                  // Spacer(),
+                  Spacer(),
                   Chip(
                     label: Text(
                       '\$${cart.totalAmount.toStringAsFixed(2)}',
@@ -40,6 +40,9 @@ class CartScreen extends StatelessWidget {
                               .color),
                     ),
                     backgroundColor: Theme.of(context).primaryColor,
+                  ),
+                  SizedBox(
+                    width: 10,
                   ),
                   TextButton(
                     onPressed: () {
