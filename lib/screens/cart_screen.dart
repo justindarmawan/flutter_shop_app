@@ -105,11 +105,20 @@ class _OrderButtonState extends State<OrderButton> {
               Navigator.of(context).pushNamed(OrdersScreen.routeName);
             },
       child: _isLoading
-          ? CircularProgressIndicator()
-          : Text(
-              'ORDER NOW',
-              style: TextStyle(
-                color: Theme.of(context).primaryColor,
+          ? Container(
+              width: 100,
+              height: 50,
+              alignment: Alignment.center,
+              child: CircularProgressIndicator())
+          : Container(
+              width: 100,
+              height: 50,
+              alignment: Alignment.center,
+              child: Text(
+                'ORDER NOW',
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                ),
               ),
             ),
     );
