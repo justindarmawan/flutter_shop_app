@@ -46,10 +46,14 @@ class _OrdersScreenState extends State<OrdersScreen> {
               );
             } else {
               return Consumer<Orders>(
-                builder: (ctx, orderData, child) => ListView.builder(
-                  itemBuilder: (ctx, i) => OrderItem(orderData.orders[i]),
-                  itemCount: orderData.orders.length,
-                ),
+                builder: (ctx, orderData, child) => orderData.orders.isEmpty
+                    ? Center(
+                        child: Text('Order is empty!'),
+                      )
+                    : ListView.builder(
+                        itemBuilder: (ctx, i) => OrderItem(orderData.orders[i]),
+                        itemCount: orderData.orders.length,
+                      ),
               );
             }
           }
